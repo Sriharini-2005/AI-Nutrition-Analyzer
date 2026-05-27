@@ -1,0 +1,230 @@
+# ============================================================
+#  PlateGuardian — .gitignore
+#  Covers: Python / FastAPI · React Native (Expo) · React Web
+# ============================================================
+
+
+# ───────────────────────────────────────────────
+#  SECRETS & ENVIRONMENT
+# ───────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+credentials/
+
+
+# ───────────────────────────────────────────────
+#  PYTHON / FASTAPI BACKEND
+# ───────────────────────────────────────────────
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.Python
+
+# Byte-compiled / optimised
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+*.egg
+.eggs/
+MANIFEST
+
+# Pytest / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+nosetests.xml
+pytest.xml
+
+# mypy / pyright type-checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pytype/
+pyrightconfig.json
+
+# Ruff / flake8
+.ruff_cache/
+
+# IPython / Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# uvicorn / gunicorn logs
+*.log
+logs/
+
+# SQLite database files (generated at runtime)
+*.db
+*.sqlite
+*.sqlite3
+
+# YOLO model weights (large binary files — download separately)
+backend/weights/
+weights/
+*.pt
+*.pth
+*.onnx
+*.engine
+*.tflite
+
+# OpenCV temp files
+*.tmp
+
+
+# ───────────────────────────────────────────────
+#  REACT NATIVE / EXPO (Mobile frontend)
+# ───────────────────────────────────────────────
+
+# Dependencies
+frontend/node_modules/
+node_modules/
+
+# Expo
+frontend/.expo/
+.expo/
+frontend/dist/
+frontend/web-build/
+
+# Native build output
+frontend/android/
+frontend/ios/
+android/
+ios/
+
+# Metro bundler cache
+.metro-health-check*
+frontend/.metro/
+
+# EAS / Expo build
+eas.json
+.easignore
+
+# TypeScript compiled output
+frontend/*.js.map
+frontend/**/*.js.map
+tsconfig.tsbuildinfo
+frontend/tsconfig.tsbuildinfo
+
+
+# ───────────────────────────────────────────────
+#  REACT WEB (frontend-web)
+# ───────────────────────────────────────────────
+frontend-web/node_modules/
+frontend-web/dist/
+frontend-web/build/
+frontend-web/.cache/
+frontend-web/.parcel-cache/
+frontend-web/.vite/
+
+
+# ───────────────────────────────────────────────
+#  NODE / NPM / YARN / PNPM (shared)
+# ───────────────────────────────────────────────
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.npm/
+package-lock.json
+# Uncomment below if you prefer to commit yarn.lock only:
+# yarn.lock
+
+
+# ───────────────────────────────────────────────
+#  OS & EDITOR NOISE
+# ───────────────────────────────────────────────
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+
+# VS Code
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json.example
+
+# JetBrains IDEs (PyCharm, WebStorm, etc.)
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Vim / Emacs
+*.swp
+*.swo
+*~
+\#*\#
+.#*
+
+
+# ───────────────────────────────────────────────
+#  DOCKER
+# ───────────────────────────────────────────────
+.dockerignore
+docker-compose.override.yml
+
+
+# ───────────────────────────────────────────────
+#  MISC
+# ───────────────────────────────────────────────
+
+# Uploaded images / user content (never commit)
+uploads/
+media/
+static/uploads/
+
+# Test fixtures with real images
+tests/fixtures/*.jpg
+tests/fixtures/*.jpeg
+tests/fixtures/*.png
+
+# Docs build output
+docs/_build/
+docs/site/
+
+# Temporary files
+tmp/
+temp/
+*.bak
+*.orig
