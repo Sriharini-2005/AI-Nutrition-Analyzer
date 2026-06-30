@@ -1,0 +1,195 @@
+# ============================================================
+# PlateGuardian — .gitignore
+# Covers: Python / FastAPI · React (Vite)
+# ============================================================
+
+# ------------------------------------------------------------
+# SECRETS & ENVIRONMENT
+# ------------------------------------------------------------
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+credentials/
+
+# ------------------------------------------------------------
+# PYTHON / FASTAPI
+# ------------------------------------------------------------
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+.Python
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyc
+*.pyo
+
+# Build
+dist/
+build/
+*.egg-info/
+*.egg
+.eggs/
+MANIFEST
+
+# Testing
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+coverage.xml
+*.cover
+nosetests.xml
+pytest.xml
+
+# Type checking
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pytype/
+pyrightconfig.json
+
+# Ruff
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# Logs
+*.log
+logs/
+
+# SQLite databases
+*.db
+*.sqlite
+*.sqlite3
+
+# AI model weights
+backend/weights/
+weights/
+*.pt
+*.pth
+*.onnx
+*.engine
+*.tflite
+
+# Temp
+*.tmp
+
+# ------------------------------------------------------------
+# REACT / VITE
+# ------------------------------------------------------------
+
+# Dependencies
+node_modules/
+frontend/node_modules/
+
+# Build output
+dist/
+frontend/dist/
+build/
+
+# Vite cache
+.vite/
+frontend/.vite/
+
+# React Native / Expo (ignored if unused)
+.expo/
+frontend/.expo/
+frontend/web-build/
+frontend/android/
+frontend/ios/
+android/
+ios/
+
+# Metro cache
+.metro-health-check*
+frontend/.metro/
+
+# Source maps
+*.js.map
+*.tsbuildinfo
+
+# ------------------------------------------------------------
+# NODE
+# ------------------------------------------------------------
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.pnpm-store/
+.yarn/cache/
+.yarn/unplugged/
+.yarn/build-state.yml
+.yarn/install-state.gz
+.npm/
+
+# ------------------------------------------------------------
+# OS FILES
+# ------------------------------------------------------------
+
+.DS_Store
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# ------------------------------------------------------------
+# VS CODE / IDE
+# ------------------------------------------------------------
+
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json.example
+
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Vim
+*.swp
+*.swo
+*~
+
+# ------------------------------------------------------------
+# DOCKER
+# ------------------------------------------------------------
+
+docker-compose.override.yml
+
+# ------------------------------------------------------------
+# UPLOADS
+# ------------------------------------------------------------
+
+uploads/
+media/
+static/uploads/
+
+# ------------------------------------------------------------
+# DOCS
+# ------------------------------------------------------------
+
+docs/_build/
+docs/site/
+
+# ------------------------------------------------------------
+# TEMP
+# ------------------------------------------------------------
+
+tmp/
+temp/
+*.bak
+*.orig
